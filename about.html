@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="Hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>桂季 | 關於桂季</title>
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" href="images/logo-favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html"><img src="images/guiji-logo.svg" alt=""></a></div>
+            <div class="menu-btn">
+                <!-- 漢堡選單 -->
+                <a href="javascript:void(0)">
+                    <i class="fas fa-bars fa-2x"></i></a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="link-color"><a href="about.html">關於桂季</a></li>
+                    <li><a href="season.html">季節分佈</a></li>
+                    <li><a href="">水果種類</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- -------------------以上header區-------------------------- -->
+
+    <main>
+        <img src="images/gjuji-logo-big.svg" alt="logo">
+        <section class="about-brand">
+                <img src="images/about-bg.svg" alt="">
+                <article>
+                    <h2>概念起源</h2>
+                        <p class="about-text1">臺灣面積不大，卻擁有多樣的氣候與地理條件，加上長期以農立國，農業技術精良，成就了「寶島」的美名。</p>
+
+                    <h2>網站理念</h2>
+                        <p class="about-text2">「桂季」取自於果子之臺語諧音(kué-tsí)，專為介紹臺灣水果的網站，提供水果知識，期望透過網站讓更多人了解臺灣水果。</p>
+                 </article>
+        </section>
+    </main>
+
+
+    <!-- -------------------以下footer區-------------------------- -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="copyright">
+                <p>© 2020 Mily Hsieh</p>
+            </div>
+            <div class="footer-info">
+                <p>本網站內容為練習前端使用，無任何商業用途。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        "use strict"
+        new WOW().init();
+
+        //卷軸上滑出現header區
+        $(document).ready(function () {
+            $.extend({
+                'goAnchor': function (to, time) {
+                    $obj = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+                    $($obj).animate({
+                        scrollTop: to
+                    }, time);
+                }
+            });
+        });
+        let bodyClass = document.body.classList,
+            lastScrollY = 0;
+        window.addEventListener('scroll', function () {
+            let st = this.scrollY;
+            if (st < lastScrollY) {
+                bodyClass.remove('hideClose');
+            } else {
+                bodyClass.add('hideClose');
+            }
+            lastScrollY = st;
+        });
+
+        //漢堡選單，點擊後出現nav
+        $('.menu-btn').click(function () {
+            $('nav').slideToggle();
+        }); //漢堡選單end
+
+        //手機版開關漢堡選單後拉回網頁版時，漢堡選單會失效
+        //但這段可不下，因為現實狀況不會出現
+        $(window).resize(function () {
+            if ($(window).width() > 768) {
+                $('nav').show();
+            }
+        }); //windows resize end
+
+    </script>
+
+    </script>
+
+
+</body>
+
+</html>

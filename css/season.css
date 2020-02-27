@@ -1,0 +1,327 @@
+/* ----------season區塊---------- */
+.season{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    /* margin: 200px auto; */
+    margin: auto;
+    height: 100vh;
+}
+.season img{
+    position: relative;
+    width: 130%;
+}
+
+
+.season img:hover{
+    transform: translateY(-15px);
+/* Chrome26.0以上與Safari6.1以上開始支援，使用 -webkit- 開頭*/
+/*    -moz-transform: translateY(-15px);
+ FireFox16.及以上開始支援，使用 -moz- 開頭 */
+/*    -ms-transform: translateY(-15px);
+ IE 10.0以上開始支援，使用 -webkit- 開頭*/
+    transition: 0.5s;
+}
+
+/* 春夏秋冬四字下面加陰影 */
+.season>a::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    -webkit-transform: translateX(50px);
+    background-image: radial-gradient(ellipse,rgba(33,33,33,.1) 25%,transparent 70%);
+}
+
+/* 手機版 */
+@media screen and (max-width: 454px) {
+    .season{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        width: 80%;
+        margin: 200px auto;
+        max-height: 300px;
+    }
+    .season a{
+        width: 50%;
+    }
+    .season a::after{
+        display: none;
+    }
+    .season img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .season img:hover{
+        transform: translateY(0px);
+    }
+}
+/* 平版 */
+@media screen and (min-width: 451px) and (max-width: 768px) {
+    .season{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        width: 80%;
+        margin: 200px auto;
+        max-height: 700px;
+    }
+    .season a{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+    .season a::after{
+        display: none;
+    }
+    .season img{
+        width: 80%;
+        margin-bottom: 80px;
+    }
+    .season img:hover{
+        transform: translateY(0px);
+    }
+}
+/* --------season區塊 end-------- */
+
+
+/* --------春夏秋冬各區塊-------- */
+#spring,
+#summer,
+#autumn,
+#winter{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    /* margin: 200px auto; */
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    /* height: 100vh; */
+}
+
+#spring>img,
+#summer>img,
+#autumn>img,
+#winter>img{
+    width: 100%;
+    max-width: 250px;
+    height: 50%;
+}
+
+/* .fruit-spring,
+.fruit-autumn{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+} 不知為何關掉flex沒影響，所以改成下面只寫margin左右200*/
+
+.fruit-spring,
+.fruit-autumn{
+    margin-right: 100px;
+}
+
+.fruit-summer,
+.fruit-winter{
+    margin-left: 100px;
+}
+
+@media (max-width: 450px) {
+    #spring,
+    #autumn{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 15px;
+        padding-bottom: 35px;
+    }
+    #summer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 35px;
+    }
+    #winter{
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 100px;
+    }
+    #spring>img,
+    #summer>img,
+    #autumn>img,
+    #winter>img{
+        width: 50%;
+        max-width: 80px;
+        padding-top: 85px;
+        padding-bottom: 35px;
+        /* 用margin推不出去，只好用padding */
+    }
+    #spring>.fruit-spring,
+    #summer>.fruit-summer,
+    #autumn>.fruit-autumn,
+    #winter>.fruit-winter{
+        margin: 0 auto;
+    }
+    .fruit-spring>article{
+        margin-top: 0;
+    }
+    h1 , p{
+        line-height: 23px;
+        letter-spacing: 0px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+
+    #spring,
+    #autumn{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 100px;
+        padding-bottom: 35px;
+    }
+    #summer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 35px;
+    }
+    #winter{
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 100px;
+    }
+    #spring>img,
+    #summer>img,
+    #autumn>img,
+    #winter>img{
+        width: 100%;
+        max-width: 200px;
+        padding-top: 85px;
+        padding-bottom: 50px;
+    }
+    #spring>.fruit-spring,
+    #summer>.fruit-summer,
+    #autumn>.fruit-autumn,
+    #winter>.fruit-winter{
+        margin: 0 auto;
+    }
+    .fruit-spring>article{
+        margin-top: 0;
+    }
+    h1 , p{
+        line-height: 23px;
+        letter-spacing: 0px;
+    }
+    .fruit-spring article,
+    .fruit-summer article,
+    .fruit-autumn article,
+    .fruit-winter article{
+        width: 60%;
+    }
+    .fruit li{
+        display: flex;
+        justify-content: center;
+    }
+    .fruit img{
+        width: 70%;
+    }
+}
+/* --------春夏秋冬各區塊end-------- */
+
+/* --------春夏秋冬各區塊共用排版-------- */
+.fruit{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    background-color: #C6F6DE;
+    border-radius: 5px;
+    padding: 15px;
+    width: 60%;
+    margin: auto;
+}
+.fruit>li{
+    width: 25%;
+}
+section li:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+article{
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 20px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    height: 150px;
+}
+article h1{
+font-weight: bolder;
+/* border-bottom: 0.5px solid rgb(0, 0, 0);
+padding-bottom: 10px; */
+margin-bottom: 15px;
+text-align: center;
+}
+article p{
+    font-size: 0.9em;
+}
+/* --------春夏秋冬各區塊共用排版 end-------- */
+
+
+
+/* ----------置頂按鈕------------- */
+.top-btn a{
+    position: fixed;
+    display: block;
+    bottom: 30px;
+    right: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    color: #1C9956;
+    font-size: 25px;
+    border: 4px solid #1C9956;
+}
+.top-btn a:hover{
+    color: #b3751d;
+    padding: 8px;
+    bottom: 28px;
+    right: 28px;
+    border: 4px solid #1C9956;
+}
+@media (max-width: 768px) {
+    .top-btn a:hover{
+        bottom: 30px;
+        right: 30px;
+        padding: 6px;
+        color: #1C9956;
+    }  
+}
+/* ---------置頂按鈕end----------- */
+
+
+
+
+
+
+
+
+
+
+#spring{
+    /* background: linear-gradient(100deg, rgb(255, 244, 249) 65%, rgb(255, 235, 244) 35%);	 */
+}
+#summer{
+    /* background: linear-gradient(-100deg, #FFFBEF 65%, #FFF1D0 35%);	 */
+}
+#autumn{
+    /* background: linear-gradient(100deg, #FFF5EF 65%, #FFEDE3 35%);	 */
+}
+#winter{
+    /* background: linear-gradient(-100deg, #EFF8FF 65%, #E5F4FF 35%);	 */
+}
