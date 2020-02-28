@@ -56,7 +56,7 @@ header{
     position: fixed;
     top: 0;
     transition: top 0.4s ease-in-out;
-    z-index: 500;
+    z-index: 100;
     /* 讓header在最上層 */
 }
 .hideClose header {

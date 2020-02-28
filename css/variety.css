@@ -1,10 +1,200 @@
-.working{
-    margin: 400px auto;
-    text-align: center;
-    font-size: 1.8em;
-    padding: 20px;
-    border: 3px solid #007535;
-    border-radius: 30px;
-    width: 180px;
-    color: #007535;
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 655px;
+    margin: 130px auto;
+}
+.fruits{
+    position: relative;
+    width: 100%;
+    max-width: 155px;
+    height: 120px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #c6f6de;
+}
+.fruits img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 80px;
+}
+.fruits:hover{
+    background-color: #9ee3bf;
+    transition: 0.4s;
+}
+.fruit-name{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(166, 242, 204, 0.5);
+    display: block;
+    opacity: 0;
+}
+.fruit-name h2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1.5px solid #1c9956;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #bff7da;
+    box-shadow: 0 0 5px #00000030;
+    color: #1c9956;
+}
+.fruit-name:hover{
+    opacity: 1;
+} */
+
+
+@media screen and (max-width: 768px) {
+    main{
+        width: 90%;
+        margin:  110px auto 40px auto;
+    }
+    .fruits{
+        width: 30%;
+    }
+}
+
+.fruits-info:target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fruits-info{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #c6f6de;
+  margin: 30px auto;
+  z-index: 1000;
+}
+.fruits-info section{
+  width: 85%;
+}
+
+.fruits-info h3{
+  display: inline-block;
+  font-size: 24px;
+  background-color: #1c9956;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px;
+  margin: 0px 10px 20px auto;
+}
+.fruits-info h4{
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+}
+.fruits-info .close::after {
+  right: 20px;
+  top: 20px;
+  position: absolute;
+  display: flex;
+  z-index: 202;
+  background-color: #000000;
+  border-radius: 50%;
+  color: white;
+  content: "×";
+  padding: 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+.fruits-info figure img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.fruits-info figcaption{
+  font-size: 15px;
+  line-height: 20px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .fruits-info {
+      display: none;
+      background-color: rgba(255, 255, 255, 0);
+  }
+    /* 打開圖鑑 */
+  .fruits-info:target {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+    
+    .fruits-info section{
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+      padding: 1.5em;
+      background-color: #c6f6de;
+      border-radius: 5px;
+      z-index: 201;
+      padding: 50px 70px;
+      box-sizing: border-box;
+  }
+    .fruits-info .close::after {
+      right: -15px;
+      top: -15px;
+      position: absolute;
+      display: flex;
+      z-index: 202;
+      background-color: #1c9956;
+      border-radius: 50%;
+      color: white;
+      content: "×";
+      padding: 10px;
+      cursor: pointer;
+      font-size: 25px;
+  }
+    /* 讓背景暗化 */
+    .fruits-info::before {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-color: rgba(0,0,0,.7);
+      content: "";
+      cursor: default;
+      z-index: 200;
+  }
+    /* 開始內文排版 */
+  .fruits-info h3{
+    margin-left: 0;
+  }
+  .fruits-info figure{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .fruits-info figure img{
+    width: 50%;
+    min-width: 400px;
+  }
+  .fruits-info figcaption{
+    width: 40%;
+    font-size: 14px;
+    line-height: 25px;
+  }
 }

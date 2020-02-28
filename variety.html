@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="Hant-tw">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>桂季 | 水果種類</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variety.css">
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap">
-    <link rel="stylesheet" href="css/variety.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="icon" href="images/logo-favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="images/logo-favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -36,7 +35,118 @@
     </header>
     <!-- -------------------以上header區-------------------------- -->
 
-    <div class="working wow fadeIn">頁面施工中</div>
+    <main>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="#strawberry" class="fruit-name">
+                <h2>草莓</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+        <div class="fruits">
+            <img src="images/fruits/lemon.svg" alt="">
+            <a href="" class="fruit-name">
+                <h2>檸檬</h2>
+            </a>
+        </div>
+    </main>
+    <div class="fruits-info" id="strawberry">
+        <section>
+            <h3>草莓</h3>
+            <h4>盛產期 12 月至隔年 3 月</h4>
+            <a href="#" class="close"></a>
+            <figure>
+                <img src="images/fruits/strawberry.jpg" alt="草莓照片">
+                <figcaption>
+                    草莓是源自歐洲的水果，臺灣最早引進的紀錄是1934年時由日本人引進，在陽明山開始試種。初期無法達到經濟栽培，無法順利推進市場，後來被苗栗大湖的農民引入，苦心經營有成之後，草莓成為大湖的代名詞，大湖也是臺灣最大的草莓專業種植區。
+                    <br>草莓擁有豐富的維生素C，每100公克有60毫克，是蘋果的7-10倍；果肉內富含果膠和膳食纖維，可以幫助消化。除了鮮食之外，草莓也是製作加工品的好原料，市面上有許多草莓加工食品，例如草莓泡芙、草莓肉圓和草莓香腸等，大湖農會更利用草莓製酒，是亞洲第一個草莓製酒廠。
+                </figcaption>
+            </figure>
+        </section>
+    </div>
 
     <!-- -------------------以下footer區-------------------------- -->
 
@@ -57,10 +167,10 @@
         "use strict"
         new WOW().init();
 
-            //卷軸上滑出現header區
-            $(document).ready(function() {
+        //卷軸上滑出現header區
+        $(document).ready(function () {
             $.extend({
-                'goAnchor': function(to, time) {
+                'goAnchor': function (to, time) {
                     $obj = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
                     $($obj).animate({
                         scrollTop: to
@@ -70,9 +180,9 @@
         });
         let bodyClass = document.body.classList,
             lastScrollY = 0;
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             let st = this.scrollY;
-            if( st < lastScrollY) {
+            if (st < lastScrollY) {
                 bodyClass.remove('hideClose');
             } else {
                 bodyClass.add('hideClose');
@@ -81,14 +191,14 @@
         });
 
         //漢堡選單，點擊後出現nav
-        $('.menu-btn').click(function(){
+        $('.menu-btn').click(function () {
             $('nav').slideToggle();
         }); //漢堡選單end
-        
+
         //手機版開關漢堡選單後拉回網頁版時，漢堡選單會失效
         //但這段可不下，因為現實狀況不會出現
-        $(window).resize(function(){
-            if($(window).width()>768){
+        $(window).resize(function () {
+            if ($(window).width() > 768) {
                 $('nav').show();
             }
         }); //windows resize end
