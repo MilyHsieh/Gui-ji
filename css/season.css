@@ -113,13 +113,6 @@
     height: 50%;
 }
 
-/* .fruit-spring,
-.fruit-autumn{
-    display: flex;
-    flex-direction: column;
-    margin-right: 100px;
-} 不知為何關掉flex沒影響，所以改成下面只寫margin左右200*/
-
 .fruit-spring,
 .fruit-autumn{
     margin-right: 100px;
@@ -241,12 +234,13 @@
     align-items: center; 
     background-color: #C6F6DE;
     border-radius: 5px;
-    padding: 15px;
+    padding: 25px 15px 0 15px;
     width: 60%;
     margin: auto;
 }
 .fruit>li{
     width: 25%;
+    margin-bottom: 25px;
 }
 section li:hover{
     cursor: pointer;
