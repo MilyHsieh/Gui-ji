@@ -163,6 +163,9 @@ header{
         display: block;
         line-height: 120px;
     }
+    .nav .link-color a{
+        color: white;
+    }
     .menu_btn-show .burgar_btn {
         max-height: 500px;
     }

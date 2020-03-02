@@ -205,11 +205,6 @@ header{
         background-repeat: no-repeat;
         background-size: cover; 
     }
-    .banner::before{
-        position: absolute;
-        content: url("../images/guiji-logo.svg");
-        top: 0;
-    }
 }
 /* -------banner大圖 end------- */
 
