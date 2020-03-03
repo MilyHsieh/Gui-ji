@@ -177,29 +177,20 @@
         //掛載wow.js要加的
         new WOW().init();
 
-
         //卷軸上滑出現header區
-        /* $(document).ready(function () {
-            $.extend({
-                'goAnchor': function (to, time) {
-                    $obj = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-                    $($obj).animate({
-                        scrollTop: to
-                    }, time);
+        $(function(){
+            var top1=0;
+            $("header").addClass("on");
+            $(window).scroll(function(){
+                var top2=$(window).scrollTop();
+                if (top2>top1){
+                $("header").removeClass("on")
+                } else {
+                $("header").addClass("on")
                 }
-            });
+                top1=top2;
+            })
         });
-        let bodyClass = document.body.classList,
-            lastScrollY = 0;
-        window.addEventListener('scroll', function () {
-            let st = this.scrollY;
-            if (st < lastScrollY) {
-                bodyClass.remove('hideClose');
-            } else {
-                bodyClass.add('hideClose');
-            }
-            lastScrollY = st;
-        }); */
 
         //漢堡選單，點擊後出現nav
         $('.menu-btn').click(function () {
