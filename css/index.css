@@ -393,8 +393,9 @@ header.on{
 footer{
     width: 100%;
     background: #C6F6DE;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    letter-spacing: 0.5px;
 }
 
 .footer-container{
@@ -409,14 +410,5 @@ footer{
     font-weight: bolder;
 }
 
-.footer-info{
-    text-align: center;
-    font-size: 12px;
-}
-
-footer {
-    letter-spacing: 0.5px;
-    line-height: 20px;
-}
 /*  -------footer end-------*/
 
